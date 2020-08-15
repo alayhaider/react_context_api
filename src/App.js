@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import Message from './Message';
 import CounterContext from './CounterContext';
-
+import ChildReducer from './ChildReducer'
 import './App.css';
 
 
@@ -10,6 +10,10 @@ function App() {
 let[count, setCount] = useState(10);
   return (
     <div>
+      <h1>React’s Context API and useReducer React Hooks</h1>
+
+
+
       <CounterContext.Provider value={count}>
      <Message count={count}/>     
      </CounterContext.Provider>
@@ -20,7 +24,7 @@ let[count, setCount] = useState(10);
       }>
         Update Counter       
       </button>     
-
+      <ChildReducer />
          { /*isMorning ? 'Yes':'No' */}     
 
     </div>
